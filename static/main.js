@@ -123,7 +123,7 @@ $('#layerMenu').change(function() {
 	var selectedHead = parseInt($('#headMenu').val())
 	var selectedLayer = parseInt($(this).val())
     //currentHeadIndex = +selectedHead;
-	alert(highlightedText)
+	// alert(highlightedText)
 	$.ajax({
 	type: 'POST',
 	url: 'plot_attention',
@@ -147,7 +147,7 @@ $('#headMenu').change(function() {
 	var selectedHead = parseInt($(this).val())
 	var selectedLayer = parseInt($('#layerMenu').val())
     //currentHeadIndex = +selectedHead;
-	alert(highlightedText)
+	// alert(highlightedText)
 	$.ajax({
 	type: 'POST',
 	url: 'plot_attention',
@@ -286,7 +286,6 @@ $("#textBox").keyup(function(e) {
     if (tabKeyPressed) {
 		$('#textBox').addClass('spinner');
 		var initialText = $('.textarea').text();
-	    alert(initialText);
 		$.ajax({
 		  type: 'POST',
 		  url: 'process1',

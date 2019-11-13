@@ -13,7 +13,8 @@ tokenizer = GPT2Tokenizer.from_pretrained('gpt2-medium')
 model = GPT2LMHeadModel.from_pretrained('gpt2-medium', config=config)
 model.eval()
 """
-tokenizer = GPT2Tokenizer.from_pretrained('gpt2-medium')
+model_path = 'gpt2-medium'
+tokenizer = GPT2Tokenizer.from_pretrained(model_path)
 
 # load model only once
 def load_model():
@@ -33,11 +34,11 @@ def decode_text(tokens_tensor):
 	return text
 
 class Model():
-	def __init__(self):
-		config = GPT2Config.from_pretrained('gpt2-medium')
+	def __init__(self, model_path):
+		config = GPT2Config.from_pretrained(model_path)
 		config.output_hidden_states=True
-		config.output_attentions=Truetokenizer = GPT2Tokenizer.from_pretrained('gpt2-medium')
-		self.model = GPT2LMHeadModel.from_pretrained('gpt2-medium', config=config)
+		config.output_attentions=Truetokenizer = GPT2Tokenizer.from_pretrained(model_path)
+		self.model = GPT2LMHeadModel.from_pretrained(model_path, config=config)
 		self.model.eval()
 		self.context = ''
 		
@@ -81,7 +82,7 @@ class Model():
 
 		return attention, tokens		
 		
-model = Model()
+model = Model(model_path)
 
 def get_model():
 	text = 'Default text'
