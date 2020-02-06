@@ -1,7 +1,7 @@
 # CardioAssist
 
 ## About
-An artificial intelligence sentence completion app. Built using huggingface transformers library. Press the tab key to trigger sentence completion. For working example please visit [cardioassistai.com](cardioassistai.com) 
+An artificial intelligence sentence completion app. Built using huggingface transformers library. Press the tab key to trigger sentence completion. For working example please visit [cardioassistai.com](http://cardioassistai.com) 
 
 ## Attention
 To see where words focus their attention highlight some words and then select plot attention. This produces a heat map showing where the attention is focused for each word.
